@@ -12,5 +12,3 @@ jobs:
       - uses: actions/checkout@v2
       - name: remove labels
         run: gh pr list --state merged --label "next release" --json number --jq .[].number | awk '{ system("gh pr edit "$1" --remove-label \"next release\"") }'
-        with:
-          github_token: ${{ secrets.github_token }}
