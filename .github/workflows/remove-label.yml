@@ -5,7 +5,7 @@ on:
     types: [closed]
 
 jobs:
-  add_label:
+  remove_label:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
